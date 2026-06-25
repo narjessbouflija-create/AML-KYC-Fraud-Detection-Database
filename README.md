@@ -1,43 +1,43 @@
-# 🛡️ Conception & Implémentation d'une Base de Données pour la Détection de Fraude et la Gestion AML/KYC
+# 🛡️ Relational Database Design & Implementation for Fraud Detection and AML/KYC Management
 
-## 🏫 Cadre du Projet
-* **Établissement :** École Supérieure des Communications de Tunis (SUP'COM)
-* **Année Universitaire :** 2025-2026
-* **Projet :** Ingénierie des Bases de Données (MCD / MLD / SQL)
-
----
-
-## 📝 Présentation du Projet
-Ce projet consiste à modéliser et déployer un moteur de base de données relationnelle robuste sous **Oracle SQL**, spécialement conçu pour répondre aux exigences réglementaires strictes de la finance moderne (directives **AML - Anti-Money Laundering** et procédures **KYC - Know Your Customer**).
-
-Le système centralise et analyse en continu d'importants volumes de données financières afin d'automatiser l'identification d'anomalies, d'atténuer les risques bancaires et de bloquer les tentatives de fraude.
+## 🏫 Academic Framework
+* **Institution:** Higher School of Communications of Tunis (SUP'COM)
+* **Academic Year:** 2025-2026
+* **Project:** Database Engineering (MCD / MLD / SQL)
 
 ---
 
-## 🛠️ Contenu du Repository
-Ce dossier centralise l'ensemble des livrables de notre ingénierie :
-* **`cahier_des_charges.pdf`** : Le document de spécification détaillant le contexte général, les règles de gestion bancaire et les contraintes réglementaires.
-* **`Presentation_projet.pdf`** : Le support visuel complet détaillant les apports, objectifs et résultats du système.
-* **`Looping1 (1).jpg`** : Le modèle conceptuel et logique des données (MCD/MLD) généré sur Looping pour cartographier les interactions complexes (Clients, Comptes, Transactions, Logs KYC, Dispositifs d'Alerte).
+## 📝 Project Overview
+This project focuses on modeling and deploying a robust relational database engine using **Oracle SQL**, specifically engineered to meet the strict regulatory requirements of modern finance (**AML - Anti-Money Laundering** directives and **KYC - Know Your Customer** procedures).
+
+The system centralizes and analyzes large volumes of core financial data in real time to automate anomaly detection, mitigate systemic banking risks, and prevent sophisticated financial fraud attempts.
 
 ---
 
-## 🧠 Algorithmes & Requêtes SQL Clés Déployés
-La base de données intègre plus de 30 scripts d'analyse de données complexes et d'audits de sécurité. Parmi les requêtes majeures implémentées, on retrouve :
+## 🛠️ Repository Deliverables
+This repository centralizes all technical engineering blueprints and documentation:
+* **`cahier_des_charges.pdf`**: The technical specifications document detailing the core banking rules, system scope, and strict compliance constraints.
+* **`Presentation_projet.pdf`**: The comprehensive project presentation highlighting the architecture, system goals, and analytical results.
+* **`Looping1 (1).jpg`**: The Conceptual and Logical Data Models (MCD/MLD) generated using Looping to map complex relational interactions (Clients, Accounts, Financial Transactions, KYC Verification Logs, and Alerting Entities).
 
-1. **Détection du *Structuring* (Fractionnement de fonds) - [Requête 29] :**
-   Algorithme SQL détectant les transactions répétées s'approchant volontairement du seuil légal déclaratif (montants ciblés entre **9 000 € et 9 999 €** sur une fenêtre glissante de 7 jours).
+---
+
+## 🧠 Core Algorithmic SQL Queries Deployed
+The backend data engine integrates over 30 advanced data analytics and security audit scripts. Key algorithmic queries implemented include:
+
+1. **Structuring / Smurfing Detection (Transaction Fractioning) - [Query 29]:**
+   An advanced SQL script designed to isolate repeated transactions intentionally targeted between **€9,000 and €9,999** over a 7-day rolling window. This algorithm flags users attempting to bypass the standard legal mandatory reporting threshold of €10,000.
    
-2. **Audit de Sécurité Interne (Espionnage de données) - [Requête 27] :**
-   Identification immédiate des employés accédant à des dossiers clients hors de leur périmètre géographique ou d'agence (complicité interne ou fuite de données).
+2. **Internal Corporate Auditing (Insider Threat Detection) - [Query 27]:**
+   Instantly identifies employees accessing client profiles outside their specific branch or regional scope, flagging potential corporate espionage, internal database breaches, or collusion with fraudsters.
 
-3. **Violation des Règles de Conformité KYC - [Requêtes 28 & 30] :**
-   * Filtrage et isolation des transactions initiées par des clients dont les documents d'identité réglementaires sont expirés.
-   * Traçabilité et scoring des acteurs ayant accumulé plusieurs refus successifs lors de la vérification de leur identité (suspicion d'usurpation).
+3. **Regulatory KYC Compliance Violations - [Queries 28 & 30]:**
+   * Automates the restriction and isolation of financial transactions triggered by accounts holding expired identity documents.
+   * Tracks and scores entities with 2 or more successive KYC verification rejections, systematically isolating potential identity theft or fraudulent onboarding attempts.
 
 ---
 
-## 🛠️ Technologies Utilisées
-* **SGBDR :** Oracle SQL (PL/SQL)
-* **Modélisation :** Looping (Génération des MCD / MLD)
-* **Réglementations cibles :** FATF/GAFI Recommendations, Directives Européennes AML/KYC, Loi Tunisienne de lutte contre le blanchiment d'argent.
+## 💻 Tech Stack & Regulatory Compliance
+* **RDBMS:** Oracle SQL (PL/SQL)
+* **Data Modeling:** Looping (MCD / MLD Generation)
+* **Target Standards:** FATF/GAFI Recommendations, European Union 5th AML Directive, Tunisian Anti-Money Laundering and Counter-Terrorism Financing Laws.
