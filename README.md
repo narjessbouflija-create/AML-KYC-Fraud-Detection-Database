@@ -3,7 +3,7 @@
 ## 🏫 Cadre du Projet
 * **Établissement :** École Supérieure des Communications de Tunis (SUP'COM)
 * **Année Universitaire :** 2025-2026
-* **Projet :** Ingénierie des Bases de Données (M MCD / MLD / SQL)
+* **Projet :** Ingénierie des Bases de Données (MCD / MLD / SQL)
 
 ---
 
